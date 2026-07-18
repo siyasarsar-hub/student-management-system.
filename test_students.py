@@ -21,5 +21,9 @@ class TestStudent(unittest.TestCase):
     def test_update_not_found(self):
         self.assertEqual(update_student(50, "Test"), "Student Not Found")
 
+    def test_remove(self):
+        add_student(4, "Aman")
+        self.assertEqual(remove_student(4), "Student Removed")
+
 if __name__ == "__main__":
     unittest.main()
